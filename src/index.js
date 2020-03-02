@@ -17,7 +17,7 @@ app.get('/api/weather/', getWeahterByCityOrZip);
 app.use(errorHandler);
 
 // start server
-const port = process.env.NODE_ENV === 'production' ? 80 : 3001;
+const port = process.env.NODE_ENV === 'production' ? process.env.PORT : 3001;
 const server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
 });
