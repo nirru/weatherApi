@@ -12,6 +12,9 @@ app.use(cors());
 
 // api routes
 app.get('/api/weather/', getWeahterByCityOrZip);
+app.get('/', (req,res) => {
+    return res.send('welcome to Weather Node API')
+});
 
 // global error handler
 app.use(errorHandler);
